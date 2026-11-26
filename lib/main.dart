@@ -25,7 +25,8 @@
 //   "Add L1 answers" and push.
 
 
-import 'package:material_ui/material_ui.dart';
+
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -57,32 +58,18 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Lab L1 · 67124875'),
       ),
       body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(
-                Icons.person,
-                size: 128,
-              ),
-              const SizedBox(height: 24),
-              const Text(
-                'Teepakorn Jongjit - 67124875',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Likes: $_likes',
-                style: const TextStyle(fontSize: 20),
-              ),
-              const SizedBox(height: 16),
-              FilledButton(
-                onPressed: _like,
-                child: const Text('Like'),
-              ),
-            ],
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.person, size: 96),
+            const SizedBox(height: 16),
+            const Text('Teepakorn Jongjit - 67124875'),
+            Text('Likes: $_likes'),
+            FilledButton(
+              onPressed: _like,
+              child: const Text('Like'),
+            ),
+          ],
         ),
       ),
     );
